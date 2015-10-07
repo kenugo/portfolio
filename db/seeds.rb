@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+<<<<<<< HEAD
 
 p1 = Posts.create(title: "Test post number one", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam arcu ipsum, finibus at diam eu, dictum aliquet urna. Nunc eget ligula blandit felis pulvinar hendrerit nec sed lacus. Mauris sapien purus, aliquet egestas varius vitae, varius a nibh. Nulla aliquam lobortis velit, vel feugiat nibh tempus vitae. Ut convallis enim finibus, sodales enim a, congue tortor. Suspendisse eget maximus lectus. Quisque a lectus vitae orci scelerisque congue gravida a nulla. Morbi lectus sapien, mollis et felis quis, bibendum iaculis lacus. Aliquam placerat risus et sapien egestas, eget fermentum purus dapibus. Aenean in rhoncus orci. Proin ornare faucibus posuere. Aliquam ut blandit quam, eu interdum velit.
 
@@ -20,3 +21,5 @@ tag1 = Tags.create(key: "Sports")
 tag2 = Tags.create(key: "Misc")
   
 p1.tags << [tag1, tag2]
+=======
+>>>>>>> 6ab4d95a9087b158b4493772130f6e9365e26549
