@@ -1,0 +1,75 @@
+<!-- START PAGE SOURCE - Will be used for blog -->
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+        <% @posts.each do |post| %>
+        <div class="article">
+          <p class="date"><%= post.created_at.strftime("%Y")%><span><%= post.created_at.strftime("%m/%d")%></span></p>
+          <h2><span><%= post.title %></span></h2>
+          <div class="clr"></div>
+          <p>Posted by <a href="#"><%= post.author %></a> &nbsp;|&nbsp; Filed under 
+            <% @tags = post.tags %>
+            <% @tags.each do |t| %>
+            <a href="#"><%= t.key %></a> &nbsp;
+            <% end %>
+          </p>
+          <%= image_tag(post.image, :style => "width: 605; height: 197") %>
+          <p><%= post.body[0..300] + "..." %></p>
+          <p class="spec"><%= link_to "Read more &raquo".html_safe, post_path(post), :class => "rm" %>&nbsp;|&nbsp; <a href="#" class="com">Comments (13) &raquo;</a></p>
+        </div>
+        <% end %>
+        <div class="article">
+          <p class="date">2018<span>18/10</span></p>
+          <h2><span>Template License</span></h2>
+          <div class="clr"></div>
+          <p>Posted by <a href="#">Owner</a> &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a></p>
+          <%= image_tag("img1.jpg", :style => "width: 605; height: 197") %>
+          <p>This is a free CSS website template by FreeWebsiteTemplateZ.com. This work is distributed under the Creative Commons Attribution 3.0 License, which means that you are free to use it for any personal or commercial purpose provided the credit links in the template footer are left intact.</p>
+          <p class="spec"><a href="#" class="rm">Read more &raquo;</a> &nbsp;|&nbsp; <a href="#" class="com">Comments (13) &raquo;</a></p>
+        </div>
+        <div class="article">
+          <p class="date">2018<span>18/10</span></p>
+          <h2><span>Lorem Ipsum</span> Dolor Sit</h2>
+          <div class="clr"></div>
+          <p>Posted by <a href="#">Owner</a> &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a></p>
+          <img src="images/img2.jpg" width="605" height="197" alt="" />
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <a href="#">Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo.</a> Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam.</p>
+          <p class="spec"><a href="#" class="rm">Read more &raquo;</a> &nbsp;|&nbsp; <a href="#" class="com">Comments (7) &raquo;</a></p>
+        </div>
+        <p class="pages">Page 1 of 2 &nbsp;&nbsp;&nbsp; <span>1</span> <a href="#">2</a> <a href="#">&raquo;</a></p>
+      </div>
+      <div class="sidebar">
+        <div class="gadget">
+          <h2 class="star"><span>Sidebar</span> Menu</h2>
+          <div class="clr"></div>
+          <ul class="sb_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TemplateInfo</a></li>
+            <li><a href="#">Style Demo</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Archives</a></li>
+          </ul>
+        </div>
+        <div class="gadget">
+          <h2 class="star"><span>Sponsors</span></h2>
+          <div class="clr"></div>
+          <ul class="ex_menu">
+            <li><a href="#">Lorem ipsum dolor</a><br />
+              Donec libero. Suspendisse bibendum</li>
+            <li><a href="#">Dui pede condimentum</a><br />
+              Phasellus suscipit, leo a pharetra</li>
+            <li><a href="#">Condimentum lorem</a><br />
+              Tellus eleifend magna eget</li>
+            <li><a href="#">Fringilla velit magna</a><br />
+              Curabitur vel urna in tristique</li>
+            <li><a href="#">Suspendisse bibendum</a><br />
+              Cras id urna orbi tincidunt orci ac</li>
+            <li><a href="#">Donec mattis</a><br />
+              purus nec placerat bibendum</li>
+          </ul>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+<!-- END PAGE SOURCE -->
